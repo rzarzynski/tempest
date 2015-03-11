@@ -854,6 +854,10 @@
 # container-sync-realms.conf (string value)
 #cluster_name = name1
 
+# Verify only the behaviours and traits described in the document
+# "OpenStack Object Storage API v1\" which is available at
+# http://developer.openstack.org (boolean value)
+#strict_mode = false
 
 [object-storage-feature-enabled]
 

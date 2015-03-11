@@ -635,6 +635,11 @@ ObjectStoreGroup = [
                help="One name of cluster which is set in the realm whose name "
                     "is set in 'realm_name' item in this file. Set the "
                     "same cluster name as Swift's container-sync-realms.conf"),
+    cfg.BoolOpt('strict_mode',
+               default=False,
+               help="Verify only the behaviours and traits described in "
+                    "the document \"OpenStack Object Storage API v1\" which "
+                    "is available at http://developer.openstack.org"),
 ]
 
 object_storage_feature_group = cfg.OptGroup(
