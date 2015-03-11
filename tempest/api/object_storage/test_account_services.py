@@ -80,7 +80,8 @@ class AccountTest(base.BaseObjectTest):
         # header. This is a special case, therefore the existence of response
         # headers is checked without custom matcher.
         self.assertIn('content-length', resp)
-        self.assertIn('x-timestamp', resp)
+        if not CONF.object_storage.strict_mode:
+            self.assertIn('x-timestamp', resp)
         self.assertIn('x-account-bytes-used', resp)
         self.assertIn('x-account-container-count', resp)
         self.assertIn('x-account-object-count', resp)

@@ -15,7 +15,9 @@
 import re
 
 from testtools import helpers
+from tempest import config
 
+CONF = config.CONF
 
 class ExistsAllResponseHeaders(object):
     """
@@ -52,8 +54,9 @@ class ExistsAllResponseHeaders(object):
 
         # Check headers for a specific method or target
         if self.method == 'GET' or self.method == 'HEAD':
-            if 'x-timestamp' not in actual:
-                return NonExistentHeader('x-timestamp')
+            if not CONF.object_storage.strict_mode:
+                if 'x-timestamp' not in actual:
+                    return NonExistentHeader('x-timestamp')
             if 'accept-ranges' not in actual:
                 return NonExistentHeader('accept-ranges')
             if self.target == 'Account':
