@@ -78,7 +78,6 @@ class AccountTest(base.BaseObjectTest):
         # container request, the response does not contain 'accept-ranges'
         # header. This is a special case, therefore the existence of response
         # headers is checked without custom matcher.
-        self.assertIn('content-length', resp)
         self.assertIn('x-timestamp', resp)
         self.assertIn('x-account-bytes-used', resp)
         self.assertIn('x-account-container-count', resp)
