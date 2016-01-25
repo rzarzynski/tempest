@@ -37,13 +37,23 @@ class ExistsAllResponseHeaders(object):
         self.target = target
         self.method = method
 
+    def _conlen_required(self, resp):
+        # Verify whether given HTTP response must contain content-length.
+        # Take into account the exceptions defined in RFC 7230.
+        if resp.status == 204:
+            return False
+        elif resp.status >= 100 and resp.status < 200:
+            return False
+
+        return True
+
     def match(self, actual):
         """Check headers
 
-        param: actual HTTP response headers
+        param: actual HTTP response object inc. headers and status
         """
         # Check common headers for all HTTP methods
-        if 'content-length' not in actual:
+        if 'content-length' not in actual and self._conlen_required(actual):
             return NonExistentHeader('content-length')
         if 'content-type' not in actual:
             return NonExistentHeader('content-type')
