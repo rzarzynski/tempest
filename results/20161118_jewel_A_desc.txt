@@ -1,0 +1,1 @@
+../../radosgw-dev-scripts/start_radosgw.sh -d --debug_rgw 20 --rgw_swift_enforce_content_length true --rgw_swift_account_in_url true --rgw_keystone_implicit_tenants=false --rgw_keystone_accepted_admin_roles "admin" --rgw_swift_versioning_enabled true

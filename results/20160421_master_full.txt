@@ -1,0 +1,47 @@
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_error
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 165, in test_web_error
+    self.container_name, "notexisting")
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 433, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 483, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 414, in match
+    reraise(*matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 969, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 267, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/common/service_client.py", line 63, in request
+    raise exceptions.Unauthorized(ex)
+tempest.exceptions.Unauthorized: Unauthorized
+Details: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: process-returncode
+tags: worker-0
+----------------------------------------------------------------------
+Binary content:
+  traceback (test/plain; charset=""utf8"")
+Ran 2 tests in 0.313s
+FAILED (id=338, failures=2)

@@ -1,0 +1,666 @@
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./tempest/test_discover} --list 
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmpFQdtIF
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 109, in test_bulk_delete
+    self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 46, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 315, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 737, in _error_checker
+    raise exceptions.UnexpectedResponseCode(str(resp.status))
+tempest_lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete_by_POST[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 136, in test_bulk_delete_by_POST
+    self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 46, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 315, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 737, in _error_checker
+    raise exceptions.UnexpectedResponseCode(str(resp.status))
+tempest_lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_extract_archive[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 73, in test_extract_archive
+    resp, _ = self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 46, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 315, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 737, in _error_checker
+    raise exceptions.UnexpectedResponseCode(str(resp.status))
+tempest_lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_quotas_negative.AccountQuotasNegativeTest.test_user_modify_quota[gate,negative,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_quotas_negative.py", line 90, in test_user_modify_quota
+    {"Quota-Bytes": ""})
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method AccountClient.create_account_metadata of <tempest.services.object_storage.account_client.AccountClient object at 0x7f39228f6990>> returned ({'date': 'Thu, 11 Feb 2016 13:04:53 GMT', 'status': '204', 'connection': 'close', 'content-type': 'text/plain; charset=utf-8', 'x-trans-id': 'tx000000000000000000014-0056bc86f5-1013-default'}, '')
+======================================================================
+FAIL: tempest.api.object_storage.test_account_services.AccountTest.test_list_extensions[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_services.py", line 120, in test_list_extensions
+    resp, extensions = self.account_client.list_extensions()
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 154, in list_extensions
+    resp, body = self.get('info')
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 267, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 666, in _error_checker
+    raise exceptions.InvalidContentType(str(resp.status))
+tempest_lib.exceptions.InvalidContentType: Invalid content type provided
+Details: 404
+======================================================================
+FAIL: tempest.api.object_storage.test_account_services_negative.AccountNegativeTest.test_list_containers_with_non_authorized_user[gate,negative]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_services_negative.py", line 49, in test_list_containers_with_non_authorized_user
+    params=params)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method AccountClient.list_account_containers of <tempest.services.object_storage.account_client.AccountClient object at 0x7f392279fe10>> returned ({'status': '200', 'content-length': '2', 'content-location': 'http://127.0.0.1:8000/swift/v1/?format=json', 'x-account-object-count': '0', 'connection': 'close', 'x-timestamp': '1455195897.29999', 'x-account-bytes-used-actual': '0', 'x-trans-id': 'tx000000000000000000059-0056bc86f9-1013-default', 'date': 'Thu, 11 Feb 2016 13:04:57 GMT', 'x-account-bytes-used': '0', 'x-account-container-count': '0', 'content-type': 'application/json; charset=utf-8', 'accept-ranges': 'bytes'}, [])
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_read_object_with_rights[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl.py", line 60, in test_read_object_with_rights
+    self.container_name, object_name)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 267, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/common/service_client.py", line 63, in request
+    raise exceptions.Unauthorized(ex)
+tempest.exceptions.Unauthorized: Unauthorized
+Details: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_write_object_with_rights[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl.py", line 81, in test_write_object_with_rights
+    object_name, 'data', headers={})
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 40, in create_object
+    resp, body = self.put(url, data, headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 315, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 63, in request
+    raise exceptions.Unauthorized(ex)
+tempest.exceptions.Unauthorized: Unauthorized
+Details: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_quotas.ContainerQuotasTest.test_upload_large_object[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_quotas.py", line 80, in test_upload_large_object
+    self.container_name, object_name, data)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method ObjectClient.create_object of <tempest.services.object_storage.object_client.ObjectClient object at 0x7f3922580510>> returned ({'status': '201', 'content-length': '0', 'last-modified': 'Thu, 11 Feb 2016 13:05:01 GMT', 'connection': 'close', 'etag': '8ca276f3eb3b33e9a2d0c11eb7f82137', 'x-trans-id': 'tx00000000000000000009b-0056bc86fd-1013-default', 'date': 'Thu, 11 Feb 2016 13:05:01 GMT', 'content-type': 'application/json; charset=utf-8'}, '')
+======================================================================
+FAIL: tempest.api.object_storage.test_container_quotas.ContainerQuotasTest.test_upload_too_many_objects[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_quotas.py", line 98, in test_upload_too_many_objects
+    self.container_name, "OverQuotaObject", "")
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method ObjectClient.create_object of <tempest.services.object_storage.object_client.ObjectClient object at 0x7f3922580510>> returned ({'status': '201', 'content-length': '0', 'last-modified': 'Thu, 11 Feb 2016 13:05:02 GMT', 'connection': 'close', 'etag': 'd41d8cd98f00b204e9800998ecf8427e', 'x-trans-id': 'tx0000000000000000000a5-0056bc86fe-1013-default', 'date': 'Thu, 11 Feb 2016 13:05:02 GMT', 'content-type': 'application/json; charset=utf-8'}, '')
+======================================================================
+FAIL: tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_with_metadata_value[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_services.py", line 97, in test_create_container_with_metadata_value
+    self.assertIn('x-container-meta-test-container-meta', resp)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 356, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'x-container-meta-test-container-meta' not in {'status': '204', 'content-length': '0', 'x-container-object-count': '0', 'accept-ranges': 'bytes', 'x-storage-policy': 'default-placement', 'x-container-bytes-used-actual': '0', 'x-container-bytes-used': '0', 'connection': 'close', 'x-timestamp': '1455195903.00000', 'x-trans-id': 'tx0000000000000000000c0-0056bc86ff-1013-default', 'date': 'Thu, 11 Feb 2016 13:05:03 GMT', 'content-type': 'application/json; charset=utf-8'}
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_index
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 73, in test_web_index
+    self.assertHeaders(resp, 'Object', 'GET')
+  File "/work/tempest/tempest/api/object_storage/base.py", line 108, in assertHeaders
+    target, method))
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: etag header does not exist
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_listing_css
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 138, in test_web_listing_css
+    self.assertIn(css, body)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 356, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: '<link rel="stylesheet" type="text/css" href="listings.css" />' not in '404TestObject-2054423512\nTestObject-2054423512'
+======================================================================
+FAIL: tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest.test_container_synchronization[slow]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_sync_middleware.py", line 51, in test_container_synchronization
+    self._test_container_synchronization(make_headers)
+  File "/work/tempest/tempest/api/object_storage/test_container_sync.py", line 106, in _test_container_synchronization
+    'Different object lists in containers.')
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 350, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = {u'TestSyncObject-1025385439': {u'bytes': 25,
+                                u'content_type': u'application/json',
+                                u'hash': u'2f44038d72b26b5111e0ba220c5227ad',
+                                u'last_modified': u'2016-02-11T13:05:09.000Z',
+                                u'name': u'TestSyncObject-1025385439'}}
+actual    = {}
+: Different object lists in containers.
+======================================================================
+FAIL: tempest.api.object_storage.test_crossdomain.CrossdomainTest.test_get_crossdomain_policy
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_crossdomain.py", line 44, in test_get_crossdomain_policy
+    resp, body = self.account_client.get("crossdomain.xml", {})
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 267, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 666, in _error_checker
+    raise exceptions.InvalidContentType(str(resp.status))
+tempest_lib.exceptions.InvalidContentType: Invalid content type provided
+Details: 404
+======================================================================
+FAIL: tempest.api.object_storage.test_healthcheck.HealthcheckTest.test_get_healthcheck
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_healthcheck.py", line 37, in test_get_healthcheck
+    resp, _ = self.account_client.get("healthcheck", {})
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 267, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/common/service_client.py", line 61, in request
+    headers=headers, body=body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 629, in request
+    resp, resp_body)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 666, in _error_checker
+    raise exceptions.InvalidContentType(str(resp.status))
+tempest_lib.exceptions.InvalidContentType: Invalid content type provided
+Details: 404
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost.ObjectFormPostTest.test_post_object_using_form[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost.py", line 119, in test_post_object_using_form
+    resp, body = self.object_client.post(url, body, headers=headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 252, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 65, in request
+    raise exceptions.NotFound(ex)
+tempest.exceptions.NotFound: Object not found
+Details: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_expired[gate,negative]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost_negative.py", line 122, in test_post_object_using_form_expired
+    url, body, headers=headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 433, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 483, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 414, in match
+    reraise(*matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 969, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 252, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 65, in request
+    raise exceptions.NotFound(ex)
+tempest.exceptions.NotFound: Object not found
+Details: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_invalid_signature[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost_negative.py", line 138, in test_post_object_using_form_invalid_signature
+    url, body, headers=headers)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 433, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 483, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 414, in match
+    reraise(*matchee)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 969, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/home/adam/.local/lib/python2.7/site-packages/tempest_lib/common/rest_client.py", line 252, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/common/service_client.py", line 65, in request
+    raise exceptions.NotFound(ex)
+tempest.exceptions.NotFound: Object not found
+Details: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_x_object_manifest[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 625, in test_get_object_with_x_object_manifest
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.ObjectTest.test_list_object_metadata_with_x_object_manifest[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 534, in test_list_object_metadata_with_x_object_manifest
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.ObjectTest.test_object_upload_in_segments[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 933, in test_object_upload_in_segments
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_container_object_without_using_creds[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 1014, in test_access_public_container_object_without_using_creds
+    self.assertEqual(resp_meta['x-container-read'], '.r:*,.rlistings')
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 350, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: '.r:*' != '.r:*,.rlistings'
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_object_with_another_user_creds[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 1051, in test_access_public_object_with_another_user_creds
+    self.assertEqual(resp['x-container-read'], '.r:*,.rlistings')
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 350, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: '.r:*' != '.r:*,.rlistings'
+======================================================================
+FAIL: tempest.api.object_storage.test_object_slo.ObjectSloTest.test_delete_large_object[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 165, in test_delete_large_object
+    self.assertIn('transfer-encoding', resp)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 356, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'transfer-encoding' not in {'status': '200', 'content-length': '87', 'connection': 'close', 'x-trans-id': 'tx00000000000000000028b-0056bc8738-1013-default', 'date': 'Thu, 11 Feb 2016 13:06:00 GMT', 'content-type': 'text/plain; charset=utf-8'}
+======================================================================
+FAIL: tempest.api.object_storage.test_object_slo.ObjectSloTest.test_list_large_object_metadata[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 134, in test_list_large_object_metadata
+    self._assertHeadersSLO(resp, 'HEAD')
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 106, in _assertHeadersSLO
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_slo.ObjectSloTest.test_retrieve_large_object[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 145, in test_retrieve_large_object
+    self._assertHeadersSLO(resp, 'GET')
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 106, in _assertHeadersSLO
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_slo.ObjectSloTest.test_upload_manifest[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 123, in test_upload_manifest
+    self._assertHeadersSLO(resp, 'PUT')
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 106, in _assertHeadersSLO
+    self.assertTrue(resp['etag'].startswith('\"'))
+  File "/home/adam/.local/lib/python2.7/site-packages/unittest2/case.py", line 702, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true
+======================================================================
+FAIL: tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_get_object_using_temp_url_with_inline_query_parameter[gate]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_temp_url.py", line 195, in test_get_object_using_temp_url_with_inline_query_parameter
+    self.assertEqual(resp['content-disposition'], 'inline')
+KeyError: 'content-disposition'
+======================================================================
+FAIL: tempest.api.object_storage.test_object_temp_url_negative.ObjectTempUrlNegativeTest.test_get_object_after_expiration_time[gate,negative]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 154, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_temp_url_negative.py", line 108, in test_get_object_after_expiration_time
+    self.object_client.get, url)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 422, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method ObjectClient.get of <tempest.services.object_storage.object_client.ObjectClient object at 0x7f3921f07450>> returned ({'status': '200', 'content-length': '20', 'content-location': 'http://127.0.0.1:8000/swift/v1/TestContainer-1544153056/ObjectTemp-720899975?temp_url_sig=e823825fd5711911e664c2352672090bba791350&temp_url_expires=1455195964', 'accept-ranges': 'bytes', 'last-modified': 'Thu, 11 Feb 2016 13:06:03 GMT', 'connection': 'close', 'etag': 'a16217b71af92ee46dc33f34ae870a71', 'x-timestamp': '1455195963.00000', 'x-trans-id': 'tx0000000000000000002c5-0056bc873d-1013-default', 'date': 'Thu, 11 Feb 2016 13:06:05 GMT', 'content-type': 'application/json'}, 'ObjectTemp-720899975')
+======================================================================
+FAIL: tempest.api.object_storage.test_object_version.ContainerTest.test_versioned_container[gate,smoke]
+tags: worker-0
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_version.py", line 69, in test_versioned_container
+    vers_container_name)
+  File "/work/tempest/tempest/api/object_storage/test_object_version.py", line 45, in assertContainer
+    self.assertEqual(header_value, versioned)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 350, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/home/adam/.local/lib/python2.7/site-packages/testtools/testcase.py", line 435, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'Missing Header' != 'TestVersionContainer-708999989'
+======================================================================
+FAIL: process-returncode
+tags: worker-0
+----------------------------------------------------------------------
+Binary content:
+  traceback (test/plain; charset="utf8")
+Ran 131 tests in 80.012s (+0.344s)
+FAILED (id=147, failures=32 (-1), skips=2)

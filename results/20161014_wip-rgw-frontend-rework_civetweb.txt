@@ -1,0 +1,1 @@
+-bash: ./virtualenv/bin/nosetests: No such file or directory

@@ -1,0 +1,871 @@
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete[id-c075e682-0d2a-43b2-808d-4116200d736d]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 109, in test_bulk_delete
+    self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 47, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 764, in _error_checker
+    resp=resp)
+tempest.lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete_by_POST[id-dbea2bcb-efbb-4674-ac8a-a5a0e33d1d79]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 136, in test_bulk_delete_by_POST
+    self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 47, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 764, in _error_checker
+    resp=resp)
+tempest.lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_bulk.BulkTest.test_extract_archive[id-a407de51-1983-47cc-9f14-47c2b059413c]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 73, in test_extract_archive
+    resp, _ = self._upload_archive(filepath)
+  File "/work/tempest/tempest/api/object_storage/test_account_bulk.py", line 59, in _upload_archive
+    params=params)
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 47, in create_account
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 764, in _error_checker
+    resp=resp)
+tempest.lib.exceptions.UnexpectedResponseCode: Unexpected response code received
+Details: 405
+======================================================================
+FAIL: tempest.api.object_storage.test_account_quotas.AccountQuotasTest.test_admin_modify_quota[id-63f51f9f-5f1d-4fc6-b5be-d454d70949d6,smoke]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_quotas.py", line 58, in setUp
+    body="")
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_account_quotas.AccountQuotasTest.test_upload_valid_object[id-a22ef352-a342-4587-8f47-3bbdb5b039c4,smoke]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_quotas.py", line 58, in setUp
+    body="")
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_account_quotas_negative.AccountQuotasNegativeTest.test_upload_large_object[id-cf9e21f5-3aa4-41b1-9462-28ac550d8d3f,negative]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_quotas_negative.py", line 59, in setUp
+    body="")
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_account_quotas_negative.AccountQuotasNegativeTest.test_user_modify_quota[id-d1dc5076-555e-4e6d-9697-28f1fe976324,negative]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_quotas_negative.py", line 59, in setUp
+    body="")
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_account_services.AccountTest.test_list_extensions[id-6eb04a6a-4860-4e31-ba91-ea3347d76b58]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_services.py", line 126, in test_list_extensions
+    resp, extensions = self.account_client.list_extensions()
+  File "/work/tempest/tempest/services/object_storage/account_client.py", line 151, in list_extensions
+    resp, body = self.get('info')
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 694, in _error_checker
+    raise exceptions.NotFound(resp_body, resp=resp)
+tempest.lib.exceptions.NotFound: Object not found
+Details: {u'HostId': u'1014-default-default', u'Code': u'NoSuchBucket', u'BucketName': u'info', u'RequestId': u'tx00000000000000000003c-00573222de-1014-default'}
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_delete_object_with_non_authorized_user[id-7343ac3d-cfed-4198-9bb0-00149741a492,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 129, in test_delete_object_with_non_authorized_user
+    self.container_name, object_name)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 55, in delete_object
+    resp, body = self.delete(url, headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 290, in delete
+    return self.request('DELETE', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_account_services_negative.AccountNegativeTest.test_list_containers_with_non_authorized_user[id-070e6aca-6152-4867-868d-1118d68fb38c,negative]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_account_services_negative.py", line 56, in test_list_containers_with_non_authorized_user
+    params=params)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: <bound method AccountClient.list_account_containers of <tempest.services.object_storage.account_client.AccountClient object at 0x7f2fc0506590>> returned ({'status': '200', 'content-length': '2', 'content-location': 'http://127.0.0.1:8000/swift/v1/?format=json', 'x-account-object-count': '0', 'connection': 'close', 'x-timestamp': '1462903522.73956', 'x-account-bytes-used-actual': '0', 'x-trans-id': 'tx000000000000000000067-00573222e2-1014-default', 'date': 'Tue, 10 May 2016 18:05:22 GMT', 'x-account-bytes-used': '0', 'x-account-container-count': '0', 'content-type': 'application/json; charset=utf-8', 'accept-ranges': 'bytes'}, [])
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_delete_object_without_write_rights[id-b4e366f8-f185-47ab-b789-df4416f9ecdb,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 228, in test_delete_object_without_write_rights
+    object_name)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 55, in delete_object
+    resp, body = self.delete(url, headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 290, in delete
+    return self.request('DELETE', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_read_object_with_non_authorized_user[id-abf63359-be52-4feb-87dd-447689fc77fd,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 111, in test_read_object_with_non_authorized_user
+    self.container_name, object_name)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_read_object_without_rights[id-9ed01334-01e9-41ea-87ea-e6f465582823,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 153, in test_read_object_without_rights
+    self.container_name, object_name)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_with_non_authorized_user[id-63d84e37-55a6-42e2-9e5f-276e60e26a00,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 93, in test_write_object_with_non_authorized_user
+    self.container_name, object_name, 'data', headers={})
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 40, in create_object
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_without_rights[id-a3a585a7-d8cf-4b65-a1a0-edc2b1204f85,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 174, in test_write_object_without_rights
+    object_name, 'data', headers={})
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 40, in create_object
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_without_write_rights[id-8ba512ad-aa6e-444e-b882-2906a0ea2052,negative]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl_negative.py", line 199, in test_write_object_without_write_rights
+    object_name, 'data', headers={})
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 40, in create_object
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_read_object_with_rights[id-a3270f3f-7640-4944-8448-c7ea783ea5b6]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl.py", line 71, in test_read_object_with_rights
+    self.container_name, object_name)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_write_object_with_rights[id-aa58bfa5-40d9-4bc3-82b4-d07f4a9e392a]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_container_acl.py", line 93, in test_write_object_with_rights
+    object_name, 'data', headers={})
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 40, in create_object
+    resp, body = self.put(url, data, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 322, in put
+    return self.request('PUT', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tearDownClass (tempest.api.object_storage.test_container_sync.ContainerSyncTest)
+tags: worker-1
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 318, in tearDownClass
+    six.reraise(etype, value, trace)
+  File "/work/tempest/tempest/test.py", line 301, in tearDownClass
+    teardown()
+  File "/work/tempest/tempest/api/object_storage/test_container_sync.py", line 83, in resource_cleanup
+    cls.delete_containers(cls.containers, client[0], client[1])
+  File "/work/tempest/tempest/api/object_storage/base.py", line 80, in delete_containers
+    objlist = container_client.list_all_container_objects(cont)
+  File "/work/tempest/tempest/services/object_storage/container_client.py", line 117, in list_all_container_objects
+    params={'limit': limit, 'format': 'json'})
+  File "/work/tempest/tempest/services/object_storage/container_client.py", line 160, in list_container_contents
+    resp, body = self.get(url, headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: {u'HostId': u'1014-default-default', u'Code': u'AccessDenied', u'BucketName': u'tempest-TestContainerSync-668869856', u'RequestId': u'tx0000000000000000000a0-00573222e8-1014-default'}
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_error[id-f18b4bef-212e-45e7-b3ca-59af3a465f82]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 163, in test_web_error
+    self.container_name, "notexisting")
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/services/object_storage/object_client.py", line 89, in get_object
+    resp, body = self.get(url, headers=headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_index[id-c1f055ab-621d-4a6a-831f-846fcb578b8b]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 69, in test_web_index
+    headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_listing_css[id-bc37ec94-43c8-4990-842e-0e5e02fc8926]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_staticweb.py", line 133, in test_web_listing_css
+    headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: AccessDenied
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_expired[id-d3fb3c4d-e627-48ce-9379-a1631f21336d,negative]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost_negative.py", line 123, in test_post_object_using_form_expired
+    url, body, headers=headers)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 694, in _error_checker
+    raise exceptions.NotFound(resp_body, resp=resp)
+tempest.lib.exceptions.NotFound: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_invalid_signature[id-b277257f-113c-4499-b8d1-5fead79f7360]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost_negative.py", line 139, in test_post_object_using_form_invalid_signature
+    url, body, headers=headers)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 480, in assertRaises
+    self.assertThat(our_callable, matcher)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 491, in assertThat
+    mismatch_error = self._matchHelper(matchee, matcher, message, verbose)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 542, in _matchHelper
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 108, in match
+    mismatch = self.exception_matcher.match(exc_info)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_higherorder.py", line 62, in match
+    mismatch = matcher.match(matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 470, in match
+    reraise(*matchee)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/matchers/_exception.py", line 101, in match
+    result = matchee()
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 1044, in __call__
+    return self._callable_object(*self._args, **self._kwargs)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 694, in _error_checker
+    raise exceptions.NotFound(resp_body, resp=resp)
+tempest.lib.exceptions.NotFound: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest.test_container_synchronization[id-ea4645a1-d147-4976-82f7-e5a7a3065f80,slow]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_container_sync_middleware.py", line 52, in test_container_synchronization
+    self._test_container_synchronization(make_headers)
+  File "/work/tempest/tempest/api/object_storage/test_container_sync.py", line 123, in _test_container_synchronization
+    'Different object lists in containers.')
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 406, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: !=:
+reference = {u'tempest-TestSyncObject-489395693': {u'bytes': 32,
+                                       u'content_type': u'application/json',
+                                       u'hash': u'c5dac4cb507c94a6454a281eac2d0ac3',
+                                       u'last_modified': u'2016-05-10T18:05:34.185Z',
+                                       u'name': u'tempest-TestSyncObject-489395693'}}
+actual    = {}
+: Different object lists in containers.
+======================================================================
+FAIL: tearDownClass (tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest)
+tags: worker-1
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 318, in tearDownClass
+    six.reraise(etype, value, trace)
+  File "/work/tempest/tempest/test.py", line 301, in tearDownClass
+    teardown()
+  File "/work/tempest/tempest/api/object_storage/test_container_sync.py", line 83, in resource_cleanup
+    cls.delete_containers(cls.containers, client[0], client[1])
+  File "/work/tempest/tempest/api/object_storage/base.py", line 80, in delete_containers
+    objlist = container_client.list_all_container_objects(cont)
+  File "/work/tempest/tempest/services/object_storage/container_client.py", line 117, in list_all_container_objects
+    params={'limit': limit, 'format': 'json'})
+  File "/work/tempest/tempest/services/object_storage/container_client.py", line 160, in list_container_contents
+    resp, body = self.get(url, headers={})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 684, in _error_checker
+    raise exceptions.Unauthorized(resp_body, resp=resp)
+tempest.lib.exceptions.Unauthorized: Unauthorized
+Details: {u'HostId': u'1014-default-default', u'Code': u'AccessDenied', u'BucketName': u'tempest-TestContainerSync-418401629', u'RequestId': u'tx00000000000000000017a-00573222fa-1014-default'}
+======================================================================
+FAIL: tempest.api.object_storage.test_crossdomain.CrossdomainTest.test_get_crossdomain_policy[id-d1b8b031-b622-4010-82f9-ff78a9e915c7]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_crossdomain.py", line 42, in test_get_crossdomain_policy
+    resp, body = self.account_client.get("crossdomain.xml", {})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 679, in _error_checker
+    resp=resp)
+tempest.lib.exceptions.UnexpectedContentType: Unexpected content type provided
+Details: 404
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_container_object_without_using_creds[id-07c9cf95-c0d4-4b49-b9c8-0ef2c9b27193]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 1039, in test_access_public_container_object_without_using_creds
+    self.assertIn('x-container-read', resp_meta)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 412, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'x-container-read' not in {'status': '204', 'content-length': '0', 'x-container-object-count': '1', 'content-location': 'http://127.0.0.1:8000/swift/v1/tempest-TestContainer-304189714', 'accept-ranges': 'bytes', 'x-storage-policy': 'default-placement', 'x-container-bytes-used-actual': '4096', 'date': 'Tue, 10 May 2016 18:05:53 GMT', 'connection': 'close', 'x-timestamp': '0.00000', 'x-trans-id': 'tx0000000000000000001e8-0057322301-1014-default', 'x-container-bytes-used': '25', 'content-type': 'application/json; charset=utf-8'}
+======================================================================
+FAIL: tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_object_with_another_user_creds[id-54e2a2fe-42dc-491b-8270-8e4217dd4cdc]
+tags: worker-1
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_services.py", line 1076, in test_access_public_object_with_another_user_creds
+    self.assertIn('x-container-read', resp)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 412, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'x-container-read' not in {'status': '204', 'content-length': '0', 'x-container-object-count': '1', 'content-location': 'http://127.0.0.1:8000/swift/v1/tempest-TestContainer-2129781531', 'accept-ranges': 'bytes', 'x-storage-policy': 'default-placement', 'x-container-bytes-used-actual': '4096', 'date': 'Tue, 10 May 2016 18:05:54 GMT', 'connection': 'close', 'x-timestamp': '0.00000', 'x-trans-id': 'tx0000000000000000001fb-0057322302-1014-default', 'x-container-bytes-used': '24', 'content-type': 'application/json; charset=utf-8'}
+======================================================================
+FAIL: tempest.api.object_storage.test_healthcheck.HealthcheckTest.test_get_healthcheck[id-db5723b1-f25c-49a9-bfeb-7b5640caf337]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_healthcheck.py", line 31, in test_get_healthcheck
+    resp, _ = self.account_client.get("healthcheck", {})
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 274, in get
+    return self.request('GET', url, extra_headers, headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 679, in _error_checker
+    resp=resp)
+tempest.lib.exceptions.UnexpectedContentType: Unexpected content type provided
+Details: 404
+======================================================================
+FAIL: tempest.api.object_storage.test_object_formpost.ObjectFormPostTest.test_post_object_using_form[id-80fac02b-6e54-4f7b-be0d-a965b5cbef76]
+tags: worker-2
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_formpost.py", line 118, in test_post_object_using_form
+    resp, body = self.object_client.post(url, body, headers=headers)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 259, in post
+    return self.request('POST', url, extra_headers, headers, body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 641, in request
+    resp, resp_body)
+  File "/work/tempest/tempest/lib/common/rest_client.py", line 694, in _error_checker
+    raise exceptions.NotFound(resp_body, resp=resp)
+tempest.lib.exceptions.NotFound: Object not found
+Details: NoSuchKey
+======================================================================
+FAIL: tempest.api.object_storage.test_object_slo.ObjectSloTest.test_delete_large_object[id-87b6dfa1-abe9-404d-8bf0-6c3751e6aa77]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/test.py", line 158, in wrapper
+    return func(*func_args, **func_kwargs)
+  File "/work/tempest/tempest/api/object_storage/test_object_slo.py", line 170, in test_delete_large_object
+    self.assertIn('transfer-encoding', resp)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 412, in assertIn
+    self.assertThat(haystack, Contains(needle), message)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'transfer-encoding' not in {'status': '200', 'content-length': '87', 'content-location': 'http://127.0.0.1:8000/swift/v1/tempest-TestContainer-250839232/tempest-TestObject-2077214298?multipart-manifest=delete', 'connection': 'close', 'x-trans-id': 'tx000000000000000000281-005732230d-1014-default', 'date': 'Tue, 10 May 2016 18:06:05 GMT', 'content-type': 'text/plain; charset=utf-8'}
+======================================================================
+FAIL: tempest.api.object_storage.test_object_version.ContainerTest.test_versioned_container[id-a151e158-dcbf-4a1f-a1e7-46cd65895a6f]
+tags: worker-3
+----------------------------------------------------------------------
+Empty attachments:
+  pythonlogging:''
+  stderr
+  stdout
+
+Traceback (most recent call last):
+  File "/work/tempest/tempest/api/object_storage/test_object_version.py", line 69, in test_versioned_container
+    vers_container_name)
+  File "/work/tempest/tempest/api/object_storage/test_object_version.py", line 45, in assertContainer
+    self.assertEqual(header_value, versioned)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 406, in assertEqual
+    self.assertThat(observed, matcher, message)
+  File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 493, in assertThat
+    raise mismatch_error
+testtools.matchers._impl.MismatchError: 'Missing Header' != 'tempest-TestVersionContainer-355673019'
+Ran 33 tests in 61.905s
+FAILED (id=366, failures=33)

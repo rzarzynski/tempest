@@ -1,0 +1,3 @@
+tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_end_marker[gate,smoke]
+tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest.test_container_synchronization[slow]
+process-returncode

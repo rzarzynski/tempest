@@ -1,0 +1,235 @@
+WARNING: This script is deprecated and will be removed in the near future. Please migrate to tempest run or another method of launching a test runner
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover} --list 
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmpxah2rO
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmphSSV40
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmpOt38e5
+running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-500} \
+OS_TEST_LOCK_PATH=${OS_TEST_LOCK_PATH:-${TMPDIR:-'/tmp'}} \
+${PYTHON:-python} -m subunit.run discover -t ${OS_TOP_LEVEL:-./} ${OS_TEST_PATH:-./tempest/test_discover}  --load-list /tmp/tmp5sx9HB
+{3} tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete [0.509136s] ... ok
+{3} tempest.api.object_storage.test_account_bulk.BulkTest.test_bulk_delete_by_POST [0.266702s] ... ok
+{3} tempest.api.object_storage.test_account_bulk.BulkTest.test_extract_archive [0.207257s] ... ok
+{2} tempest.api.object_storage.test_account_quotas.AccountQuotasTest.test_admin_modify_quota [0.257583s] ... ok
+{2} tempest.api.object_storage.test_account_quotas.AccountQuotasTest.test_upload_valid_object [0.410579s] ... ok
+{1} tempest.api.object_storage.test_account_quotas_negative.AccountQuotasNegativeTest.test_user_modify_quota [0.215243s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_account_metadata [0.062143s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers [0.021657s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_end_marker [0.055199s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_format_json [0.029103s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_format_xml [0.037834s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_limit [0.062239s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_limit_and_end_marker [0.025692s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_limit_and_marker [0.277408s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_limit_and_marker_and_end_marker [0.019256s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_marker [0.023727s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_marker_and_end_marker [0.035297s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_containers_with_prefix [0.051809s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_extensions ... SKIPPED: Discoverability function is disabled
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_no_account_metadata [0.026400s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_delete_object_with_non_authorized_user [0.428203s] ... ok
+{2} tempest.api.object_storage.test_account_services_negative.AccountNegativeTest.test_list_containers_with_non_authorized_user [0.875251s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_delete_object_without_using_creds [0.104781s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_list_no_containers [0.402032s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_update_account_metadata_with_create_and_delete_metadata [0.153002s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_delete_object_without_write_rights [0.233618s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_update_account_metadata_with_create_matadata_key [0.085406s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_update_account_metadata_with_create_metadata [0.120069s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_read_object_with_non_authorized_user [0.210270s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_update_account_metadata_with_delete_matadata [0.134226s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_read_object_without_rights [0.207809s] ... ok
+{3} tempest.api.object_storage.test_account_services.AccountTest.test_update_account_metadata_with_delete_matadata_key [0.158429s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_with_non_authorized_user [0.116322s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_without_rights [0.157802s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_without_using_creds [0.131133s] ... ok
+{1} tempest.api.object_storage.test_container_acl_negative.ObjectACLsNegativeTest.test_write_object_without_write_rights [0.179876s] ... ok
+{2} tempest.api.object_storage.test_container_quotas.ContainerQuotasTest.test_upload_large_object [0.586752s] ... ok
+{2} tempest.api.object_storage.test_container_quotas.ContainerQuotasTest.test_upload_too_many_objects [0.672809s] ... ok
+{2} tempest.api.object_storage.test_container_quotas.ContainerQuotasTest.test_upload_valid_object [0.497228s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_create_container_metadata_exceeds_overall_metadata_count [0.086579s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_create_container_metadata_name_exceeds_max_length [0.008486s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_create_container_metadata_value_exceeds_max_length [0.009217s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_create_container_name_exceeds_max_length [0.004696s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_delete_non_empty_container [0.295983s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_delete_with_nonexistent_container_name [0.014315s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_get_metadata_headers_with_invalid_container_name [0.018774s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_list_all_container_objects_on_deleted_container [0.267946s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_list_all_container_objects_with_nonexistent_container [0.011351s] ... ok
+{1} tempest.api.object_storage.test_container_services_negative.ContainerNegativeTest.test_update_metadata_with_nonexistent_container_name [0.037011s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container [1.152542s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_overwrite [0.860541s] ... ok
+{3} tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_read_object_with_rights [1.480080s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_with_metadata_key [0.320311s] ... ok
+{3} tempest.api.object_storage.test_container_acl.ObjectTestACLs.test_write_object_with_rights [0.504955s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_with_metadata_value [0.321459s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_with_remove_metadata_key [0.351695s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_create_container_with_remove_metadata_value [0.275232s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_delete_container [0.235108s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents [0.327468s] ... ok
+{3} tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_error [0.071023s] ... ok
+{3} tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_index [0.056758s] ... ok
+{3} tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_listing [0.065485s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_delimiter [0.358943s] ... ok
+{0} tempest.api.object_storage.test_object_expiry.ObjectExpiryTest.test_get_object_after_expiry_time [12.197044s] ... ok
+{3} tempest.api.object_storage.test_container_staticweb.StaticWebTest.test_web_listing_css [0.057693s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_end_marker [0.359085s] ... FAILED
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_format_json [0.246607s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_format_xml [0.281867s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_limit [0.298746s] ... ok
+{3} tempest.api.object_storage.test_container_sync.ContainerSyncTest.test_container_synchronization ... SKIPPED: Skipped until Bug: 1317133 is resolved.
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_marker [0.278592s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_no_object [0.248735s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_path [0.293450s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_prefix [0.280725s] ... ok
+{3} tempest.api.object_storage.test_crossdomain.CrossdomainTest.test_get_crossdomain_policy [0.148041s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_metadata [0.266421s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_list_no_container_metadata [0.306380s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_update_container_metadata_with_create_and_delete_metadata [0.259367s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_update_container_metadata_with_create_metadata [0.302081s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_2d_way [0.119366s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_across_containers [0.270128s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_update_container_metadata_with_create_metadata_key [0.434623s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_in_same_container [0.191565s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_to_itself [0.085326s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_with_x_fresh_metadata [0.117006s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_with_x_object_meta [0.068803s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_copy_object_with_x_object_metakey [0.080923s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_update_container_metadata_with_delete_metadata [0.420711s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object [0.128826s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_content_disposition [0.065904s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_content_encoding [0.061102s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_etag [0.083345s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_expect_continue [0.050431s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_transfer_encoding [0.056512s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_x_fresh_metadata [0.068022s] ... ok
+{2} tempest.api.object_storage.test_container_services.ContainerTest.test_update_container_metadata_with_delete_metadata_key [0.542482s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_x_object_meta [0.088877s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_x_object_metakey [0.051762s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_x_remove_object_meta [0.083858s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_create_object_with_x_remove_object_metakey [0.143339s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_delete_object [0.062870s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object [0.042692s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_if_different [0.082902s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_if_match [0.023686s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_if_modified_since [0.041548s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_if_none_match [0.034841s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_if_unmodified_since [0.045522s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_metadata [0.042741s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_range [0.064500s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_x_newest [0.032019s] ... ok
+{2} tempest.api.object_storage.test_object_formpost.ObjectFormPostTest.test_post_object_using_form [0.067711s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_get_object_with_x_object_manifest [0.495518s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_list_no_object_metadata [0.032931s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_list_object_metadata [0.038115s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_list_object_metadata_with_x_object_manifest [0.318548s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_object_upload_in_segments [0.436403s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata [0.057272s] ... ok
+{2} tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_get_object_using_temp_url [0.120387s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata_with_create_and_remove_metadata [0.104990s] ... ok
+{2} tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_get_object_using_temp_url_key_2 [0.062458s] ... ok
+{2} tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_get_object_using_temp_url_with_inline_query_parameter [0.025592s] ... ok
+{2} tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_head_object_using_temp_url [0.022359s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata_with_remove_metadata [0.096647s] ... ok
+{2} tempest.api.object_storage.test_object_temp_url.ObjectTempUrlTest.test_put_object_using_temp_url [0.093522s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata_with_x_object_manifest [0.513439s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata_with_x_object_metakey [0.075888s] ... ok
+{3} tempest.api.object_storage.test_object_services.ObjectTest.test_update_object_metadata_with_x_remove_object_metakey [0.077737s] ... ok
+{1} tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest.test_container_synchronization [10.417684s] ... FAILED
+{2} tempest.api.object_storage.test_object_temp_url_negative.ObjectTempUrlNegativeTest.test_get_object_after_expiration_time [2.056985s] ... ok
+{1} tempest.api.object_storage.test_healthcheck.HealthcheckTest.test_get_healthcheck [0.303963s] ... ok
+{0} tempest.api.object_storage.test_object_expiry.ObjectExpiryTest.test_get_object_at_expiry_time [12.186842s] ... ok
+{3} tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_container_object_without_using_creds [0.258626s] ... ok
+{3} tempest.api.object_storage.test_object_services.PublicObjectTest.test_access_public_object_with_another_user_creds [0.211980s] ... ok
+{3} tempest.api.object_storage.test_object_slo.ObjectSloTest.test_delete_large_object [0.640775s] ... ok
+{1} tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_expired [2.014814s] ... ok
+{1} tempest.api.object_storage.test_object_formpost_negative.ObjectFormPostNegativeTest.test_post_object_using_form_invalid_signature [0.014784s] ... ok
+{3} tempest.api.object_storage.test_object_slo.ObjectSloTest.test_list_large_object_metadata [0.386015s] ... ok
+{3} tempest.api.object_storage.test_object_slo.ObjectSloTest.test_retrieve_large_object [0.478362s] ... ok
+{3} tempest.api.object_storage.test_object_slo.ObjectSloTest.test_upload_manifest [0.436652s] ... ok
+{1} tempest.api.object_storage.test_object_version.ContainerTest.test_versioned_container [0.581233s] ... ok
+
+==============================
+Failed 2 tests - output below:
+==============================
+
+tempest.api.object_storage.test_container_services.ContainerTest.test_list_container_contents_with_end_marker[id-55b4fa5c-e12e-4ca9-8fcf-a79afe118522]
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Captured traceback:
+~~~~~~~~~~~~~~~~~~~
+    Traceback (most recent call last):
+      File "/work/tempest/tempest/api/object_storage/test_container_services.py", line 173, in test_list_container_contents_with_end_marker
+        self.assertEqual(object_name, object_list.strip('\n'))
+      File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 411, in assertEqual
+        self.assertThat(observed, matcher, message)
+      File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 498, in assertThat
+        raise mismatch_error
+    testtools.matchers._impl.MismatchError: 'TestObject-157558525' != ''
+    
+
+tempest.api.object_storage.test_container_sync_middleware.ContainerSyncMiddlewareTest.test_container_synchronization[id-ea4645a1-d147-4976-82f7-e5a7a3065f80,slow]
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Captured traceback:
+~~~~~~~~~~~~~~~~~~~
+    Traceback (most recent call last):
+      File "/work/tempest/tempest/test.py", line 119, in wrapper
+        return func(*func_args, **func_kwargs)
+      File "/work/tempest/tempest/api/object_storage/test_container_sync_middleware.py", line 52, in test_container_synchronization
+        self._test_container_synchronization(make_headers)
+      File "/work/tempest/tempest/api/object_storage/test_container_sync.py", line 123, in _test_container_synchronization
+        'Different object lists in containers.')
+      File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 411, in assertEqual
+        self.assertThat(observed, matcher, message)
+      File "/work/tempest/.venv/local/lib/python2.7/site-packages/testtools/testcase.py", line 498, in assertThat
+        raise mismatch_error
+    testtools.matchers._impl.MismatchError: !=:
+    reference = {u'tempest-TestSyncObject-599083703': {u'bytes': 32,
+                                           u'content_type': u'application/json',
+                                           u'hash': u'c009064f83174adf3f8f3ad93802e33b',
+                                           u'last_modified': u'2017-05-30T22:21:34.006Z',
+                                           u'name': u'tempest-TestSyncObject-599083703'}}
+    actual    = {u'tempest-TestSyncObject-720576855': {u'bytes': 32,
+                                           u'content_type': u'application/json',
+                                           u'hash': u'73546484c4d20c73daa773b0181c6d0e',
+                                           u'last_modified': u'2017-05-30T22:21:34.201Z',
+                                           u'name': u'tempest-TestSyncObject-720576855'}}
+    : Different object lists in containers.
+    
+
+
+======
+Totals
+======
+Ran: 140 tests in 33.0000 sec.
+ - Passed: 136
+ - Skipped: 2
+ - Expected Fail: 0
+ - Unexpected Success: 0
+ - Failed: 2
+Sum of execute time for each test: 67.3272 sec.
+
+==============
+Worker Balance
+==============
+ - Worker 0 (2 tests) => 0:00:24.384691
+ - Worker 1 (25 tests) => 0:00:27.286987
+ - Worker 2 (37 tests) => 0:00:22.932789
+ - Worker 3 (76 tests) => 0:00:28.501331
